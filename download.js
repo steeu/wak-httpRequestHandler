@@ -1,4 +1,6 @@
 
+addHttpRequestHandler('/download', 'httpRequestHandler.js', 'download');
+
 /**
  * download httprequest handler
  *
