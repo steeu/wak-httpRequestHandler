@@ -1,8 +1,7 @@
 
-addHttpRequestHandler('/download', 'httpRequestHandler.js', 'download');
-
 /**
  * download httprequest handler
+ * addHttpRequestHandler('^/download/', 'HttpRequestHandler/download.js', 'download');
  *
  * @return {Blob} file
  */
@@ -14,7 +13,7 @@ function download(request, response) {
 	    
 	    // validate file
 	    if (!file.exists) {
-	        response.statusCode = '404';
+	        response.statusCode = 404;
 	        return;
 	    }
 	    // add headers to force download
